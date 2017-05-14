@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="y7s-VG-uqK">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--联系人-->
+        <scene sceneID="XW4-Tx-yII">
+            <objects>
+                <viewController id="qZR-1q-OUt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cfQ-cm-Hag"/>
+                        <viewControllerLayoutGuide type="bottom" id="slu-Qf-Ync"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9ac-S2-vDS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="联系人" id="Ttj-3A-bR1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6PO-Xo-bIL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1366" y="375"/>
+        </scene>
+        <!--联系人-->
+        <scene sceneID="TWS-eH-QlK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y7s-VG-uqK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="联系人" image="tab_buddy_nor" selectedImage="tab_buddy_press" id="npO-3A-gsh"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hs0-mz-Tbo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.10588235294117647" green="0.70588235294117641" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qZR-1q-OUt" kind="relationship" relationship="rootViewController" id="pkq-cM-vF4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="32b-st-imH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="532" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_buddy_nor" width="16" height="16"/>
+        <image name="tab_buddy_press" width="16" height="16"/>
+    </resources>
+</document>

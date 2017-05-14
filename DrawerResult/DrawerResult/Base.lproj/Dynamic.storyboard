@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="b5H-7g-Atl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--动态-->
+        <scene sceneID="tYm-eM-ML3">
+            <objects>
+                <viewController id="dw2-li-vTa" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5pz-JD-zsT"/>
+                        <viewControllerLayoutGuide type="bottom" id="VYw-bd-IM7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="M0s-gm-FYM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="动态" id="ndV-I4-ops"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JcR-AC-Gb6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="482" y="1109"/>
+        </scene>
+        <!--动态-->
+        <scene sceneID="FXD-el-9AD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b5H-7g-Atl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="动态" image="tab_qworld_nor" selectedImage="tab_qworld_press" id="Os2-Xn-FjE"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="cU1-zI-cqy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.10588235294117647" green="0.70588235294117641" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dw2-li-vTa" kind="relationship" relationship="rootViewController" id="TCX-Wc-eSI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dtp-X7-6JS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-375" y="1109"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_qworld_nor" width="16" height="16"/>
+        <image name="tab_qworld_press" width="16" height="16"/>
+    </resources>
+</document>
