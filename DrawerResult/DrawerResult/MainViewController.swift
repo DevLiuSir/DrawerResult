@@ -15,9 +15,6 @@ class MainViewController: UITabBarController {
 //    var drawerViewController: DrawerViewController!
     
     /// 菜单页控制器
-//    var lefeMenuViewController: LeftMenuViewController!
-    
-    
 //    var messageViewController = MessageViewController()
 //    var leftMenuViewController = LeftMenuViewController()
     
@@ -25,14 +22,6 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        
-        // 左边item点击
-//        navigationItem.leftBarButtonItem?.action = #selector(showMenu)
-        
-//        view.insertSubview(leftMenuViewController.view, at: 0)
-        
-//        messageViewController.navigationItem.leftBarButtonItem?.action = #selector(showMenu)
         
     }
 
@@ -84,9 +73,6 @@ class MainViewController: UITabBarController {
         }
         
     }
-    
-    
-    
    */
     
     

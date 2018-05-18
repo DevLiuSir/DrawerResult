@@ -8,45 +8,54 @@
 
 import UIKit
 
+/// 屏幕的宽度
 let screenW: CGFloat = UIScreen.main.bounds.width
+/// 屏幕的高度
 let screenH: CGFloat = UIScreen.main.bounds.height
+/// 底部的高度
+let bottomViewHeight: CGFloat = 88
+/// 左边菜单栏的宽度
+let menuWidth = screenW * 0.82
+/// 头部视图高度
+private let headerViewH: CGFloat = 224
+/// 背景色
+private let kBackgroundColor = UIColor(white: 0.98, alpha: 0.98)
+/// 单元格重用标识符
+private let cellID = "CELLID"
 
-private let headerViewH: CGFloat = 200      // 头部视图高度
-private let colorLan = UIColor(colorLiteralRed: 13.0 / 255.0, green: 184.0 / 255.0, blue: 246.0 / 255.0, alpha: 1.0)
 
-
-private let cellID = "CELLID"       // 重用标识符
 
 class LeftMenuViewController: UIViewController {
 
+    // MARK: - 懒加载 属性
     
-    // MARK: - 属性
     /// 定义一个数组,存储表格视图的数据\Icon
-    var dataArray: [Array<String>] {
-        let array = [["我的超级会员", "vip_shadow"],["QQ钱包", "sidebar_purse"],["个性装扮", "sidebar_decoration"],["我的收藏", "sidebar_favorit"], ["我的相册", "sidebar_album"],["我的文件", "sidebar_file"]]
+    private lazy var dataArray: [Array<String>] = {
+        let array = [["我的超级会员", "vip_shadow"],["QQ钱包", "sidebar_purse"],["个性装扮", "sidebar_decoration"],["我的收藏", "sidebar_favorit"], ["我的相册", "sidebar_album"],["我的文件", "sidebar_file"], ["免流量特权", "sidebar_freetraffic"]]
         return array
-    }
-    // MARK: - 懒加载
+    }()
+    
     /// 表格视图的上面的头部视图
-    private lazy var headerView: UIView = {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: screenW, height: headerViewH))
-//        view.backgroundColor = UIColor(patternImage: UIImage(named: "sidebar_bg")!)
-        
-        let bgImageView = UIImageView(frame: view.frame)
-        bgImageView.image = UIImage(named: "sidebar_bg")
-        bgImageView.contentMode = UIViewContentMode.scaleAspectFill
-        bgImageView.clipsToBounds = true
-        view.addSubview(bgImageView)
+    private lazy var menuHeaderView: MenuHeaderView = {
+        let header = MenuHeaderView.LoadingMenuHeaderView()
+        header.frame = CGRect(x: 0, y: 0, width: menuWidth, height: headerViewH)
+        return header
+    }()
+    
+    /// 底部视图
+    private lazy var menuBottomView: MenuBottomView = {
+        let view = MenuBottomView.LoadingMenuBottomView()
+        view.frame = CGRect(x: 0, y: screenH - bottomViewHeight - 34, width: menuWidth, height: bottomViewHeight)
+        view.backgroundColor = kBackgroundColor
         return view
     }()
     
     /// 表格视图
     private lazy var tableView : UITableView = {
-       
         // 创建表格视图, 并设置其相关属性
-        let table = UITableView(frame: CGRect(x: 0, y: 200, width: screenW, height: screenH - 200), style: .plain)
+        let table = UITableView(frame: CGRect(x: 0, y: headerViewH, width: screenW, height: screenH - headerViewH), style: .plain)
         table.separatorStyle = .none                // 设置指示器样式
-        table.backgroundColor = UIColor.white
+        table.backgroundColor = kBackgroundColor
         table.dataSource = self
         table.delegate = self
         table.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
@@ -62,8 +71,9 @@ class LeftMenuViewController: UIViewController {
     
     /// 配置UI界面
     private func configUI() {
-        view.addSubview(headerView)
         view.addSubview(tableView)
+        view.addSubview(menuHeaderView)
+        view.addSubview(menuBottomView)
     }
 }
 
@@ -82,7 +92,6 @@ extension LeftMenuViewController: UITableViewDataSource {
         //cell.textLabel?.textColor = UIColor.white
         return cell
     }
- 
 }
 
 
@@ -94,11 +103,17 @@ extension LeftMenuViewController: UITableViewDelegate {
         // 点击cell闪烁
         tableView.deselectRow(at: indexPath, animated: false)
         print(dataArray[indexPath.row])
+        
+        
+        
+        let navigationControl: UINavigationController = UINavigationController()
+//        navigationControl?.pushViewController(SubViewController(), animated: true)
+        
+        navigationControl.pushViewController(SubViewController(), animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
-    
     
 }

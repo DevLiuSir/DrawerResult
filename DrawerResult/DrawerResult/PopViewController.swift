@@ -16,7 +16,6 @@ import UIKit
 private let cellID = "cellID"
 
 
-
 class PopViewController: UITableViewController {
     
     
@@ -63,22 +62,17 @@ class PopViewController: UITableViewController {
 // MARK: - 重写 UITableViewDataSource
 extension PopViewController {
     
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataArray.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
         cell.textLabel?.text = dataArray[indexPath.row][0]
         cell.textLabel?.font = UIFont.systemFont(ofSize: 13)
         cell.imageView?.image = UIImage(named: dataArray[indexPath.row][1])
         return cell
-        
     }
-
-    
 }
 
 
@@ -92,7 +86,3 @@ extension PopViewController {
         print(dataArray[indexPath.row])
     }
 }
-
-
-
-

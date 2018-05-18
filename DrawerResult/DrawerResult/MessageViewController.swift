@@ -14,9 +14,8 @@ class MessageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 左边item点击
-//        navigationItem.leftBarButtonItem?.action = #selector(showMenu)
-//        navigationItem.rightBarButtonItem?.action = #selector(showAdd)
+        configUI()
+
     }
     
     //导航栏左侧按钮事件响应
@@ -42,8 +41,17 @@ class MessageViewController: UIViewController {
 }
 
 
-extension MessageViewController: UIPopoverPresentationControllerDelegate {
+// MARK: - 配置UI
+extension MessageViewController {
     
+    private func configUI() {
+//        navigationController?.navigationBar.tintColor = .white
+    }
+}
+
+
+extension MessageViewController: UIPopoverPresentationControllerDelegate {
+    // 模态动画的样式
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return UIModalPresentationStyle.none
     }
@@ -53,7 +61,3 @@ extension MessageViewController: UIPopoverPresentationControllerDelegate {
     }
     
 }
-
-
-
-

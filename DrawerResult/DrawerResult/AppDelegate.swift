@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         
         // 创建窗口
@@ -26,10 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // 加载storyboard
         let tabBarVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! MainViewController
-  
         
         // 设置窗口的跟控制器
-        self.window?.rootViewController = DrawerViewController(mainVC: tabBarVC, leftMenuVC: lefeMenuVC, leftWidth: 300)
+        self.window?.rootViewController = DrawerViewController(mainVC: tabBarVC, leftMenuVC: lefeMenuVC, leftWidth: menuWidth)
         
         // 显示窗口
         self.window?.makeKeyAndVisible()

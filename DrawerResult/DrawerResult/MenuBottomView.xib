@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="UMN-md-ptJ" userLabel="MenuBottomView" customClass="MenuBottomView" customModule="DrawerResult" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sidebar_setting" translatesAutoresizingMaskIntoConstraints="NO" id="qDc-kg-X6Q">
+                    <rect key="frame" x="34" y="16" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="yWj-i2-jzg"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A00-G2-qrK">
+                    <rect key="frame" x="30" y="46" width="32" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sidebar_nightmode_off" translatesAutoresizingMaskIntoConstraints="NO" id="jgQ-p3-B6M">
+                    <rect key="frame" x="116" y="16" width="24" height="24"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="夜间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0m-gD-2R5">
+                    <rect key="frame" x="112" y="46" width="32" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="4kO-BF-vlQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23° " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJr-3x-6F0">
+                    <rect key="frame" x="188.5" y="14" width="42" height="28"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                    <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="香港" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeE-Ak-FpI">
+                    <rect key="frame" x="194" y="46" width="31" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="n0m-gD-2R5" firstAttribute="centerX" secondItem="jgQ-p3-B6M" secondAttribute="centerX" id="2dz-gy-Kcs"/>
+                <constraint firstItem="aeE-Ak-FpI" firstAttribute="centerY" secondItem="n0m-gD-2R5" secondAttribute="centerY" id="5SE-Zv-wl3"/>
+                <constraint firstItem="qDc-kg-X6Q" firstAttribute="top" secondItem="E7h-Ry-P9G" secondAttribute="top" constant="16" id="7WI-ye-a0e"/>
+                <constraint firstItem="aeE-Ak-FpI" firstAttribute="leading" secondItem="n0m-gD-2R5" secondAttribute="trailing" constant="50" id="7l5-bj-eOb"/>
+                <constraint firstItem="n0m-gD-2R5" firstAttribute="leading" secondItem="A00-G2-qrK" secondAttribute="trailing" constant="50" id="HYy-1W-O97"/>
+                <constraint firstItem="aeE-Ak-FpI" firstAttribute="centerX" secondItem="CJr-3x-6F0" secondAttribute="centerX" id="PXB-31-wGP"/>
+                <constraint firstItem="A00-G2-qrK" firstAttribute="baseline" secondItem="n0m-gD-2R5" secondAttribute="baseline" id="W7Y-Zu-AKn"/>
+                <constraint firstItem="jgQ-p3-B6M" firstAttribute="leading" secondItem="qDc-kg-X6Q" secondAttribute="trailing" constant="58" id="lZq-aT-5Bk"/>
+                <constraint firstItem="qDc-kg-X6Q" firstAttribute="leading" secondItem="E7h-Ry-P9G" secondAttribute="leading" constant="34" id="ngl-aL-xag"/>
+                <constraint firstItem="n0m-gD-2R5" firstAttribute="top" secondItem="jgQ-p3-B6M" secondAttribute="bottom" constant="6" id="p4v-Ea-d6R"/>
+                <constraint firstItem="CJr-3x-6F0" firstAttribute="centerY" secondItem="jgQ-p3-B6M" secondAttribute="centerY" id="pOT-O6-aa1"/>
+                <constraint firstItem="qDc-kg-X6Q" firstAttribute="centerX" secondItem="A00-G2-qrK" secondAttribute="centerX" id="sX9-r8-Vke"/>
+                <constraint firstItem="jgQ-p3-B6M" firstAttribute="top" secondItem="qDc-kg-X6Q" secondAttribute="top" id="ybA-z2-0Xp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="E7h-Ry-P9G"/>
+            <connections>
+                <outlet property="temperatureLabel" destination="CJr-3x-6F0" id="N3w-zy-HZU"/>
+            </connections>
+            <point key="canvasLocation" x="-108" y="14.392803598200901"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="sidebar_nightmode_off" width="24" height="24"/>
+        <image name="sidebar_setting" width="24" height="24"/>
+    </resources>
+</document>

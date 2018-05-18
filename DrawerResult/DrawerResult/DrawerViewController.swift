@@ -8,17 +8,19 @@
 
 import UIKit
 
-
-// 菜单状态枚举
+/// 菜单状态枚举
+///
+/// - collapsed: 未显示(收起)
+/// - expanding: 展开中
+/// - expanded: 展开
 enum MenuState {
     case collapsed      // 未显示(收起)
     case expanding      // 展开中
     case expanded       // 展开
 }
 
-
+// MARK: - 抽屉控制器
 class DrawerViewController: UIViewController {
-    
     
     /// 主页控制器
     var mainVC: MainViewController?
@@ -50,8 +52,8 @@ class DrawerViewController: UIViewController {
         view.addSubview(leftMenuVC.view)
         view.addSubview(mainVC.view)
         
-        addChildViewController(leftMenuVC)
-        addChildViewController(mainVC)
+        addChild(leftMenuVC)
+        addChild(mainVC)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -63,7 +65,7 @@ class DrawerViewController: UIViewController {
     /// 灰色背景按钮
     private lazy var coverBtn: UIButton = {
         let btn = UIButton(frame: self.view.bounds)
-        btn.backgroundColor = UIColor.clear
+        btn.backgroundColor = UIColor(white: 0.0, alpha: 0.2)
         btn.addTarget(self, action: #selector(closeLeftMenu(closeDrawerWithDuration:)), for: .touchUpInside)
         btn.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(panCloseLeftMenu(_:))))
         return btn
@@ -75,25 +77,21 @@ class DrawerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        childVC_Add_Gesture()
-        
+        childVC_AddGesture()
         showShadowForMainViewController(true)
-        
-        
     }
 
     
     /// 给每个控制器添加手势
-    private func childVC_Add_Gesture() {
+    private func childVC_AddGesture() {
         // 遍历控制器
-        for childViewController in (mainVC?.childViewControllers)! {
+        for childViewController in (mainVC?.children)! {
             addPanGestureRecognizerToView(view: childViewController.view)
         }
 
     }
 
     //MARK: - 添加屏幕手势
-    
     // 屏幕边缘手势 : UIScreenEdgePanGestureRecognizer
     private func addPanGestureRecognizerToView(view: UIView) {
         
@@ -101,7 +99,6 @@ class DrawerViewController: UIViewController {
 //        pan.edges = UIRectEdge.left
         
          let pan = UIPanGestureRecognizer(target: self, action: #selector(edgPanGesture(_:)))
-        
         view.addGestureRecognizer(pan)
     }
     
@@ -113,11 +110,11 @@ class DrawerViewController: UIViewController {
         
         let offsetX = pan.translation(in: pan.view).x
         
-        if pan.state == UIGestureRecognizerState.changed && offsetX <= leftWidth {
+        if pan.state == UIGestureRecognizer.State.changed && offsetX <= leftWidth {
             mainVC?.view.transform = CGAffineTransform(translationX: max(offsetX, 0), y: 0)
             leftVC?.view.transform = CGAffineTransform(translationX: -leftWidth + offsetX, y: 0)
             
-        } else if pan.state == UIGestureRecognizerState.ended || pan.state == UIGestureRecognizerState.cancelled || pan.state == UIGestureRecognizerState.failed {
+        } else if pan.state == UIGestureRecognizer.State.ended || pan.state == UIGestureRecognizer.State.cancelled || pan.state == UIGestureRecognizer.State.failed {
             
             if offsetX > screenW * 0.5 {
                  openLeftMenu(openDrawerWithDuration: 0.25)
@@ -135,14 +132,14 @@ class DrawerViewController: UIViewController {
         let offsetX = pan.translation(in: pan.view).x
         if offsetX > 0 {return}
         
-        if pan.state == UIGestureRecognizerState.changed && offsetX >= -leftWidth {
+        if pan.state == UIGestureRecognizer.State.changed && offsetX >= -leftWidth {
             
             let distace = leftWidth + offsetX
             
             mainVC?.view.transform = CGAffineTransform(translationX: distace, y: 0)
             leftVC?.view.transform = CGAffineTransform(translationX: offsetX, y: 0)
             
-        } else if pan.state == UIGestureRecognizerState.ended || pan.state == UIGestureRecognizerState.cancelled || pan.state == UIGestureRecognizerState.failed {
+        } else if pan.state == UIGestureRecognizer.State.ended || pan.state == UIGestureRecognizer.State.cancelled || pan.state == UIGestureRecognizer.State.failed {
             
             if offsetX > screenW * 0.5 {
                 
@@ -182,7 +179,7 @@ class DrawerViewController: UIViewController {
     
     /// 关闭抽屉
     /// 灰色背景按钮点击事件
-    func closeLeftMenu(closeDrawerWithDuration: CGFloat) {
+    @objc func closeLeftMenu(closeDrawerWithDuration: CGFloat) {
         // curveLinear: 动画执行过程中, 匀速执行
         // usingSpringWithDamping：1.0表示没有弹簧震动动画
         UIView.animate(withDuration: TimeInterval(closeDrawerWithDuration), delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0, options: .curveLinear, animations: {

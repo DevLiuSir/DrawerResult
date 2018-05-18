@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B15B80821BEAE120092B618 /* MenuHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B15B80721BEAE120092B618 /* MenuHeaderView.xib */; };
+		6B15B80A21BEAE210092B618 /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B15B80921BEAE210092B618 /* MenuHeaderView.swift */; };
+		6B22581B21BD7C0800AAC40E /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B22581A21BD7C0800AAC40E /* SubViewController.swift */; };
+		6B22581D21BD872D00AAC40E /* MenuBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B22581C21BD872D00AAC40E /* MenuBottomView.xib */; };
+		6B22581F21BD874C00AAC40E /* MenuBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B22581E21BD874C00AAC40E /* MenuBottomView.swift */; };
 		6B26F4A21E8635060048BD84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B26F4A11E8635060048BD84 /* AppDelegate.swift */; };
 		6B26F4A71E8635060048BD84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B26F4A51E8635060048BD84 /* Main.storyboard */; };
 		6B26F4A91E8635060048BD84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B26F4A81E8635060048BD84 /* Assets.xcassets */; };
 		6B26F4AC1E8635060048BD84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B26F4AA1E8635060048BD84 /* LaunchScreen.storyboard */; };
 		6B26F4B51E8636A20048BD84 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B26F4B31E8636A20048BD84 /* Message.storyboard */; };
-		6B26F4B71E8637200048BD84 /* Linkman.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B26F4B61E8637200048BD84 /* Linkman.storyboard */; };
 		6B26F4BA1E8637620048BD84 /* Dynamic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B26F4B81E8637620048BD84 /* Dynamic.storyboard */; };
 		6B5719811E87CB3E004D89DC /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5719801E87CB3E004D89DC /* MessageViewController.swift */; };
+		6B5C2DCA1EDC6AAF0043712A /* Linkman.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5C2DC81EDC6AAF0043712A /* Linkman.storyboard */; };
 		6BB0DC081E86806F005B300D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB0DC071E86806F005B300D /* MainViewController.swift */; };
 		6BB0DC0A1E86D2BE005B300D /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB0DC091E86D2BE005B300D /* DrawerViewController.swift */; };
 		6BB0DC0C1E86D2E0005B300D /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB0DC0B1E86D2E0005B300D /* LeftMenuViewController.swift */; };
@@ -22,6 +27,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B15B80721BEAE120092B618 /* MenuHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuHeaderView.xib; sourceTree = "<group>"; };
+		6B15B80921BEAE210092B618 /* MenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeaderView.swift; sourceTree = "<group>"; };
+		6B22581A21BD7C0800AAC40E /* SubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
+		6B22581C21BD872D00AAC40E /* MenuBottomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuBottomView.xib; sourceTree = "<group>"; };
+		6B22581E21BD874C00AAC40E /* MenuBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBottomView.swift; sourceTree = "<group>"; };
 		6B26F49E1E8635060048BD84 /* DrawerResult.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawerResult.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B26F4A11E8635060048BD84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B26F4A61E8635060048BD84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -29,9 +39,9 @@
 		6B26F4AB1E8635060048BD84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B26F4AD1E8635060048BD84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B26F4B41E8636A20048BD84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Message.storyboard; sourceTree = "<group>"; };
-		6B26F4B61E8637200048BD84 /* Linkman.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Linkman.storyboard; sourceTree = "<group>"; };
 		6B26F4B91E8637620048BD84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Dynamic.storyboard; sourceTree = "<group>"; };
 		6B5719801E87CB3E004D89DC /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		6B5C2DC91EDC6AAF0043712A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Linkman.storyboard; sourceTree = "<group>"; };
 		6BB0DC071E86806F005B300D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6BB0DC091E86D2BE005B300D /* DrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
 		6BB0DC0B1E86D2E0005B300D /* LeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
@@ -72,12 +82,17 @@
 				6BB0DC071E86806F005B300D /* MainViewController.swift */,
 				6BB0DC091E86D2BE005B300D /* DrawerViewController.swift */,
 				6BE5C7F41E890C72004543B7 /* PopViewController.swift */,
+				6B22581A21BD7C0800AAC40E /* SubViewController.swift */,
 				6BB0DC0B1E86D2E0005B300D /* LeftMenuViewController.swift */,
 				6B5719801E87CB3E004D89DC /* MessageViewController.swift */,
 				6B26F4A51E8635060048BD84 /* Main.storyboard */,
 				6B26F4B31E8636A20048BD84 /* Message.storyboard */,
-				6B26F4B61E8637200048BD84 /* Linkman.storyboard */,
+				6B5C2DC81EDC6AAF0043712A /* Linkman.storyboard */,
 				6B26F4B81E8637620048BD84 /* Dynamic.storyboard */,
+				6B22581E21BD874C00AAC40E /* MenuBottomView.swift */,
+				6B22581C21BD872D00AAC40E /* MenuBottomView.xib */,
+				6B15B80921BEAE210092B618 /* MenuHeaderView.swift */,
+				6B15B80721BEAE120092B618 /* MenuHeaderView.xib */,
 				6B26F4A81E8635060048BD84 /* Assets.xcassets */,
 				6B26F4AA1E8635060048BD84 /* LaunchScreen.storyboard */,
 				6B26F4AD1E8635060048BD84 /* Info.plist */,
@@ -112,11 +127,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = LC;
 				TargetAttributes = {
 					6B26F49D1E8635060048BD84 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -146,9 +162,11 @@
 			files = (
 				6B26F4AC1E8635060048BD84 /* LaunchScreen.storyboard in Resources */,
 				6B26F4A91E8635060048BD84 /* Assets.xcassets in Resources */,
-				6B26F4B71E8637200048BD84 /* Linkman.storyboard in Resources */,
+				6B22581D21BD872D00AAC40E /* MenuBottomView.xib in Resources */,
 				6B26F4B51E8636A20048BD84 /* Message.storyboard in Resources */,
+				6B15B80821BEAE120092B618 /* MenuHeaderView.xib in Resources */,
 				6B26F4BA1E8637620048BD84 /* Dynamic.storyboard in Resources */,
+				6B5C2DCA1EDC6AAF0043712A /* Linkman.storyboard in Resources */,
 				6B26F4A71E8635060048BD84 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,10 +180,13 @@
 			files = (
 				6B26F4A21E8635060048BD84 /* AppDelegate.swift in Sources */,
 				6BB0DC081E86806F005B300D /* MainViewController.swift in Sources */,
+				6B22581B21BD7C0800AAC40E /* SubViewController.swift in Sources */,
 				6BE5C7F51E890C72004543B7 /* PopViewController.swift in Sources */,
+				6B22581F21BD874C00AAC40E /* MenuBottomView.swift in Sources */,
 				6BB0DC0C1E86D2E0005B300D /* LeftMenuViewController.swift in Sources */,
 				6BB0DC0A1E86D2BE005B300D /* DrawerViewController.swift in Sources */,
 				6B5719811E87CB3E004D89DC /* MessageViewController.swift in Sources */,
+				6B15B80A21BEAE210092B618 /* MenuHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +225,14 @@
 			name = Dynamic.storyboard;
 			sourceTree = "<group>";
 		};
+		6B5C2DC81EDC6AAF0043712A /* Linkman.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B5C2DC91EDC6AAF0043712A /* Base */,
+			);
+			name = Linkman.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -216,15 +245,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -266,15 +303,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -308,7 +353,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LC.DrawerResult;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -320,7 +366,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LC.DrawerResult;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

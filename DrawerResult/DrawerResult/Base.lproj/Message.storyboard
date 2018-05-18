@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QRy-MJ-ocJ">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QRy-MJ-ocJ">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Message View Controller-->
+        <!--消息-->
         <scene sceneID="erh-7D-Jt2">
             <objects>
                 <viewController id="9c1-uP-PM2" customClass="MessageViewController" customModule="DrawerResult" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,27 +18,17 @@
                         <viewControllerLayoutGuide type="bottom" id="Gov-Fl-JjH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="k9V-fB-c0F">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="tf1-wo-Deb">
-                        <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" image="IconView" id="YEq-DN-phJ">
+                    <navigationItem key="navigationItem" title="消息" id="tf1-wo-Deb">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="IconView" id="YEq-DN-phJ">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="showMenu:" destination="9c1-uP-PM2" id="dP9-gI-rEF"/>
                             </connections>
                         </barButtonItem>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="yb3-eQ-6qC">
-                            <rect key="frame" x="112.5" y="7" width="150" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <segments>
-                                <segment title="消息"/>
-                                <segment title="电话"/>
-                            </segments>
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </segmentedControl>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="qmC-Jt-PWz">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -59,9 +49,12 @@
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6rM-8g-4EU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.10650839737801998" green="0.70682025404812854" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -74,8 +67,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="IconView" width="44" height="43"/>
-        <image name="tab_recent_nor" width="16" height="16"/>
-        <image name="tab_recent_press" width="16" height="16"/>
+        <image name="IconView" width="72" height="72"/>
+        <image name="tab_recent_nor" width="29" height="29"/>
+        <image name="tab_recent_press" width="29" height="29"/>
     </resources>
 </document>
